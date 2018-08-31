@@ -10,3 +10,12 @@ flowplayer-flash版播放器测试
 4. npm run start
 5. 访问 http://localhost:3001/  播放器参数测试
 6. 访问 http://localhost:3001/api  播放器api测试
+
+## 参考资料
+
+* [Flowplayer@官网](https://flowplayer.com/)
+* [Flowplayer@github](https://github.com/flowplayer/flowplayer)
+* [Flowplayer视频播放插件@jquery插件库](http://www.jq22.com/jquery-info6854)
+* [Flowplayer-flash@官网](http://flash.flowplayer.org/)
+* [Flowplayer-flash@github](https://github.com/flowplayer/flash)
+* [Flowplayer-flash@Player-api](http://flash.flowplayer.org/documentation/api/player.html)
