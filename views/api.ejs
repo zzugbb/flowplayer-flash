@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="/javascripts/flowplayer-3.2.13.min.js"></script>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <h1>播放器</h1>  
+    <a href="/javascripts/歌曲.mp4" 
+      style="display:block;width:425px;height:300px;"id="player"></a> 
+
+    <button class="stop" onclick="clickStop()"  style="margin-top: 30px">暂停</button>  
+    <button class="start" onclick="clickStart()"  style="margin-left: 30px; margin-top: 30px;">播放</button>  
+    <script type="text/javascript">   
+      $f("player", "/javascripts/flowplayer-3.2.18.swf", {  
+        onLoad: function() { //加载完成  
+          //版本相关
+          var version = $f("player").getVersion();
+          console.log("对应的版本为：" + version);
+          //当前的时间，单位秒
+          var time = $f("player").getTime();
+          console.log("时长为：" + time);
+          //音量
+          var volume = $f("player").getVolume();
+          console.log("音量为：" + volume);
+        },
+        onFinish: function() { //播放完毕
+          window.clearInterval(stateInterval);   
+        }
+      });
+
+      //控制停止，恢复到初始
+      function clickStop() {
+        $f().stop();
+      }
+      
+      //控制播放
+      function clickStart() {
+        $f(0).play();
+      }
+      
+      //获取播放器状态
+      var stateInterval;
+      clickState();
+      function clickState() {  //-1:unloaded  0:loaded  1:unstarted  2:buffering  3:playing  4:paused 5:ended
+        stateInterval = setInterval(function(){
+          var state = $f("player").getState();
+          console.log("当前的状态为：" + state);
+        }, 500)
+      }
+      
+      //绑定各样的监听事件
+      $f().onVolume(function(level) {
+        console.log("当前的声音级别为" + level);
+      }).onFullscreen(function()  {
+        console.log("触发全屏");
+      }) .onFullscreenExit(function() {
+        console.log("触发退出全屏")
+      }).onMute(function() {
+        console.log("触发静音")
+      }).onUnmute(function() {
+        console.log("触发静音移除")
+      }).onError(function(){
+        $f().hide();
+      });
+    </script>
+  </body>
+</html>
