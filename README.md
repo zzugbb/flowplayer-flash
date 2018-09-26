@@ -1,12 +1,13 @@
-# flowplayer-flash
+# video-test
 
-flowplayer-flash版播放器测试
+视频播放测试：
+
+* flowplayer-flash版播放器测试
+* VideoJs&videojs-contrib-hls测试
 
 ## 使用
 
-1. git clone https://github.com/zzugbb/flowplayer-flash.git
-2. cd flowplayer-flash
-3. npm install
-4. npm run start
-5. 访问 http://localhost:3001/  播放器参数测试
-6. 访问 http://localhost:3001/api  播放器api测试
+1. npm install
+2. npm run start
+3. 访问 http://localhost:3001/   //flowplayer-flash播放器参数测试
+4. 访问 http://localhost:3001/api  //flowplayer-flash播放器api测试
