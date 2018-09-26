@@ -13,7 +13,6 @@
 4. 访问 http://localhost:3001/api  //flowplayer-flash播放器api测试
 5. 访问 http://localhost:3001/videojs-test  //流媒体测试 VideoJs&videojs-contrib-hls
 
-
 ### flowplayer-flash 相关
 
 #### 参考资料
@@ -24,7 +23,6 @@
 * [Flowplayer-flash@官网](http://flash.flowplayer.org/)
 * [Flowplayer-flash@github](https://github.com/flowplayer/flash)
 * [Flowplayer-flash@Player-api](http://flash.flowplayer.org/documentation/api/player.html)
-
 
 ### 流媒体相关
 
